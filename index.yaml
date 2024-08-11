@@ -3,7 +3,7 @@ entries:
   fefrappe:
   - apiVersion: v2
     appVersion: v15.32.1
-    created: "2024-08-11T19:11:35.650581686Z"
+    created: "2024-08-11T19:30:16.174323495Z"
     dependencies:
     - alias: redis-cache
       condition: redis-cache.enabled
@@ -24,11 +24,11 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 12.1.6
     description: Kubernetes Helm Chart for the latest stable ERPNext branch
-    digest: 4cdd75d48d534c1b6f1da90aac9ffd2bfec0ed3e98d9755fae75099dcb6a8e5a
+    digest: c27654983ca9beccdeea4bcfc085dc0d79191c92dee51f3197bded38299cd888
     icon: https://raw.githubusercontent.com/frappe/erpnext/develop/erpnext/public/images/erpnext-logo.png
     name: fefrappe
     type: application
     urls:
-    - https://samimahamoedfineto.github.io/helm/fefrappe-7.0.108.tgz
+    - https://samimahamoedfineto.github.io/erpchart/fefrappe-7.0.108.tgz
     version: 7.0.108
-generated: "2024-08-11T19:11:35.637313248Z"
+generated: "2024-08-11T19:30:16.16132607Z"
