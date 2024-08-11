@@ -1,0 +1,21 @@
+{{- if and .Values.persistence.apps.enabled (not .Values.persistence.apps.existingClaim) }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ template "erpnext.fullname" . }}-apps
+  labels:
+    {{- include "erpnext.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.apps.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.apps.size | quote }}
+  {{- if .Values.persistence.apps.storageClass }}
+  {{- if (eq "-" .Values.persistence.apps.storageClass) }}
+  storageClassName: ""
+  {{- else }}
+  storageClassName: "{{ .Values.persistence.apps.storageClass }}"
+  {{- end }}
+  {{- end }}
+{{- end }}
